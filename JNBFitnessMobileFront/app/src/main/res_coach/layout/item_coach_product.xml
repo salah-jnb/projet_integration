@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    style="@style/Widget.App.Card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Image du produit -->
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:contentDescription="Image du produit"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Titre du produit -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.App.H3"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Catégorie et prix -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nutrition"
+                style="@style/BadgeBase"
+                android:background="@drawable/badge_orange"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginRight="8dp"/>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="29,99€"
+                android:textColor="@color/orange_strong"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+        <!-- Description du produit -->
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.App.Body"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Métadonnées supplémentaires -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_inventory"
+                    app:tint="@color/text_secondary"
+                    android:contentDescription="@null"
+                    android:layout_marginRight="4dp"/>
+
+                <TextView
+                    android:id="@+id/stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="En stock"
+                    style="@style/TextAppearance.App.Caption"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actif"
+                style="@style/BadgeBase"
+                android:background="@drawable/badge_success"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!-- Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modifier"
+                style="@style/Widget.App.Button.Primary"
+                android:layout_marginEnd="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Supprimer"
+                style="@style/Widget.App.Button.Outline"
+                app:strokeColor="@color/error"
+                android:textColor="@color/error"
+                android:layout_marginEnd="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voir"
+                style="@style/Widget.App.Button.Outline"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

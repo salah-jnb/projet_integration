@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mon Profil"
+                style="@style/TextAppearance.App.H2"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enregistrer"
+                style="@style/Widget.App.Button.Primary"/>
+        </LinearLayout>
+
+        <!-- Progress Bar -->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            app:indicatorColor="@color/orange_strong"
+            app:trackColor="@color/surface_variant"/>
+
+        <!-- Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <!-- Photo Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.App.Card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Photo de Profil"
+                        style="@style/TextAppearance.App.H3"/>
+
+                    <LinearLayout
+                        android:id="@+id/photo_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="16dp">
+
+                        <FrameLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/photo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:visibility="visible"
+                                android:src="@drawable/ic_person"
+                                android:contentDescription="Photo de profil"
+                                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay_Jnb_Circle"
+                                app:strokeColor="@color/orange_strong"
+                                app:strokeWidth="2dp"/>
+
+                            <ImageView
+                                android:id="@+id/btn_change_photo"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@android:drawable/ic_menu_camera"
+                                android:background="@drawable/photo_button_bg"
+                                android:layout_gravity="bottom|end"
+                                android:padding="8dp"
+                                android:elevation="4dp"
+                                android:contentDescription="Changer la photo"/>
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cliquez pour changer votre photo"
+                            style="@style/TextAppearance.App.Caption"
+                            android:paddingTop="12dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Note Globale uniquement -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.App.Card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Note Globale"
+                        style="@style/TextAppearance.App.Caption"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        style="@style/TextAppearance.App.H2"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:paddingTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/avis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        style="@style/TextAppearance.App.Caption"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Professional Information -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.App.Card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Informations Professionnelles"
+                        style="@style/TextAppearance.App.H3"
+                        android:layout_marginBottom="12dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.App.TextInputLayout">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/prenom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Prénom"
+                            style="@style/Widget.App.TextInputEditText"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.App.TextInputLayout">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/nom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nom"
+                            style="@style/Widget.App.TextInputEditText"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.App.TextInputLayout">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Email"
+                            android:enabled="false"
+                            style="@style/Widget.App.TextInputEditText"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Specialties -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.App.TextInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/specialites"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Spécialités"
+                    style="@style/Widget.App.TextInputEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Description -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.App.TextInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description de vos services"
+                    android:inputType="textMultiLine"
+                    android:minLines="4"
+                    android:gravity="top"
+                    style="@style/Widget.App.TextInputEditText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Security Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.App.Card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sécurité"
+                        style="@style/TextAppearance.App.H3"
+                        android:layout_marginBottom="12dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_change_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Changer le mot de passe"
+                        style="@style/Widget.App.Button.Primary"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    style="@style/Widget.App.Card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- En-tête avec nom et badge type -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <!-- Avatar circle -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/surface_variant"
+                android:layout_marginEnd="12dp">
+
+                <TextView
+                    android:id="@+id/avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/orange_strong"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:text="JD"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.App.H3"
+                    android:textSize="17sp"
+                    android:layout_marginBottom="2dp"
+                    tools:text="John Doe"/>
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.App.Body"
+                    android:textSize="14sp"
+                    tools:text="john.doe@example.com"/>
+
+            </LinearLayout>
+
+            <!-- Badge type -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/type_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/orange_strong"
+                android:layout_marginStart="8dp">
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    style="@style/TextAppearance.App.Caption"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    tools:text="ADMIN"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/surface_variant"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Statut avec icône -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@android:drawable/presence_online"
+                app:tint="@color/success"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Statut"/>
+
+            <TextView
+                android:id="@+id/statut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.App.Body"
+                android:textSize="14sp"
+                tools:text="Actif"/>
+
+        </LinearLayout>
+
+        <!-- Barre d'actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Switch Newsletter -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/newsletter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Newsletter"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                app:useMaterialThemeColors="true"/>
+
+            <!-- Boutons d'action -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <!-- Bouton Statut (icône) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_statut"
+                    style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp"
+                    app:icon="@android:drawable/ic_menu_info_details"
+                    app:iconSize="20dp"
+                    app:iconGravity="textStart"
+                    app:iconTint="#FFFFFF"
+                    app:iconPadding="0dp"
+                    app:backgroundTint="@color/orange_strong"
+                    app:cornerRadius="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Changer statut"/>
+
+                <!-- Bouton Modifier (icône) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_modifier"
+                    style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp"
+                    app:icon="@android:drawable/ic_menu_edit"
+                    app:iconSize="20dp"
+                    app:iconGravity="textStart"
+                    app:iconTint="#FFFFFF"
+                    app:iconPadding="0dp"
+                    app:backgroundTint="@color/surface_variant"
+                    app:cornerRadius="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Modifier"/>
+
+                <!-- Bouton Supprimer (icône) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_supprimer"
+                    style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp"
+                    app:icon="@android:drawable/ic_menu_delete"
+                    app:iconSize="20dp"
+                    app:iconGravity="textStart"
+                    app:iconTint="#FFFFFF"
+                    app:iconPadding="0dp"
+                    app:backgroundTint="@color/error"
+                    app:cornerRadius="10dp"
+                    android:contentDescription="Supprimer"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

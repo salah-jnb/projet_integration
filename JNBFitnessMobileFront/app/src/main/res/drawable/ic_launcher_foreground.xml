@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Personne moderne en position de force -->
+
+    <!-- Tête -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M54,32m-7,0a7,7 0 1,0 14,0a7,7 0 1,0 -14,0"/>
+
+    <!-- Cou -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M51,39h6v4h-6z"/>
+
+    <!-- Torse athlétique -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M47,43h14v18h-14z"/>
+
+    <!-- Bras gauche fléchi (biceps) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M38,48 L44,46 L46,54 L40,56 Z"/>
+
+    <!-- Bras droit fléchi (biceps) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M70,48 L64,46 L62,54 L68,56 Z"/>
+
+    <!-- Jambes - position athlétique -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,61 L45,78 L50,78 L51,61 Z"/>
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M60,61 L63,78 L58,78 L57,61 Z"/>
+
+    <!-- Haltère moderne -->
+    <!-- Barre -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M30,46h48v3h-48z"/>
+
+    <!-- Poids gauche -->
+    <path
+        android:fillColor="#60A5FA"
+        android:pathData="M26,43h6v9h-6z"/>
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M23,44h3v7h-3z"/>
+
+    <!-- Poids droit -->
+    <path
+        android:fillColor="#60A5FA"
+        android:pathData="M76,43h6v9h-6z"/>
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M82,44h3v7h-3z"/>
+
+    <!-- Détails muscles (lignes de définition) -->
+    <path
+        android:strokeColor="#DC8B0A"
+        android:strokeWidth="1"
+        android:strokeLineCap="round"
+        android:pathData="M50,50 L50,58"/>
+    <path
+        android:strokeColor="#DC8B0A"
+        android:strokeWidth="1"
+        android:strokeLineCap="round"
+        android:pathData="M58,50 L58,58"/>
+
+    <!-- Badge/Éclat de motivation -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M54,22m-3,0a3,3 0 1,0 6,0a3,3 0 1,0 -6,0"/>
+    <path
+        android:strokeColor="#10B981"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:pathData="M54,19 L54,15 M54,25 L54,29 M48,22 L44,22 M60,22 L64,22"/>
+
+</vector>

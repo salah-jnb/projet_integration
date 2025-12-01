@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="20dp"
+    android:fitsSystemWindows="true">
+
+    <!-- Header style client -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mes_notifications"
+            style="@style/TextAppearance.App.H2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/unread_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/TextAppearance.App.Caption"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_mark_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tout marquer comme lu"
+                style="@style/Widget.App.Button.Primary"
+                app:cornerRadius="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/surface_variant"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Indicateur de progression -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:indicatorColor="@color/orange_strong"
+        app:trackColor="@color/surface_variant"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- État vide avec illustration -->
+    <LinearLayout
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="40dp">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_notifications_off"
+            android:alpha="0.6"
+            android:contentDescription="@string/empty_notifications"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_notifications"
+            style="@style/TextAppearance.App.H3"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_notifications_subtitle"
+            style="@style/TextAppearance.App.Body"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <!-- Liste des notifications -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:scrollbars="vertical"/>
+
+    <!-- Badge décoratif -->
+    <View
+        android:id="@+id/notification_badge"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/unread_dot"
+        android:visibility="gone"
+        android:layout_gravity="end"/>
+
+</LinearLayout>

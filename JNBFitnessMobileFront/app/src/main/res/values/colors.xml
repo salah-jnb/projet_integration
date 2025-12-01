@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PALETTE PRINCIPALE (MANDATORY) -->
+    <color name="black">#000000</color>
+    <color name="brown_ish">#6A3200</color>
+    <color name="orange_strong">#FF7A00</color>
+    <color name="orange_light">#FF8A20</color>
+    <color name="orange_soft">#FF9A40</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- SYSTEME DE COULEURS SEMANTIQUE -->
+    
+    <!-- Brand Colors -->
+    <color name="colorPrimary">@color/orange_strong</color>
+    <color name="colorPrimaryVariant">@color/brown_ish</color>
+    <color name="colorSecondary">@color/orange_light</color>
+    <color name="colorSecondaryVariant">@color/orange_soft</color>
+    <color name="colorAccent">@color/orange_strong</color>
+
+    <!-- Backgrounds & Surfaces -->
+    <color name="background">@color/black</color>
+    <color name="surface">#121212</color> <!-- Slightly lighter than black for cards -->
+    <color name="surface_variant">#1E1E1E</color>
+    <color name="card_background">#1E1E1E</color>
+    <color name="dialog_background">#2C2C2C</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B3B3B3</color>
+    <color name="text_tertiary">#808080</color>
+    <color name="text_disabled">#666666</color>
+    <color name="text_on_primary">#000000</color>
+    <color name="text_on_secondary">#000000</color>
+
+    <!-- Status & Feedback -->
+    <color name="success">#4CAF50</color>
+    <color name="error">#CF6679</color>
+    <color name="warning">#FF9800</color>
+    <color name="info">#2196F3</color>
+
+    <!-- UI Elements -->
+    <color name="divider">#2C2C2C</color>
+    <color name="border">#404040</color>
+    <color name="icon_primary">#FFFFFF</color>
+    <color name="icon_secondary">#B3B3B3</color>
+    <color name="ripple">#1AFF7A00</color>
+
+    <!-- Legacy Mappings (Pour compatibilité) -->
+    <color name="jnb_orange">@color/orange_strong</color>
+    <color name="jnb_orange_dark">@color/brown_ish</color>
+    <color name="jnb_bg">@color/background</color>
+    <color name="card_bg">@color/card_background</color>
+    <color name="card_bg_light">@color/surface_variant</color>
+    <color name="accent_color">@color/orange_strong</color>
+    <color name="primary_color">@color/orange_strong</color>
+    <color name="primary_dark">@color/brown_ish</color>
+    <color name="secondary_color">@color/orange_light</color>
+    <color name="border_color">@color/border</color>
+    <color name="divider_color">@color/divider</color>
+    <color name="outline_color">@color/border</color>
+    <color name="error_color">@color/error</color>
+    <color name="success_color">@color/success</color>
+    <color name="warning_color">@color/warning</color>
+    <color name="info_color">@color/info</color>
+    <color name="green">@color/success</color>
+    <color name="blue">@color/info</color>
+    <color name="yellow">@color/warning</color>
+    <color name="red">@color/error</color>
+    <color name="progress_bar_track">#333333</color>
+    <color name="progress_bar_thumb">@color/orange_strong</color>
+    <color name="switch_track">#404040</color>
+    <color name="switch_thumb">@color/white</color>
+    <color name="status_bar_color">@color/black</color>
+    <color name="navigation_bar_color">@color/black</color>
+    <color name="scrim">#99000000</color>
+    <color name="dim">#66000000</color>
+    <color name="input_background">#1E1E1E</color>
+    <color name="input_border">@color/border</color>
+    <color name="input_focus_border">@color/orange_strong</color>
+    <color name="input_error_border">@color/error</color>
+    <color name="nav_item_color">@color/text_secondary</color>
+    <color name="nav_item_selected_color">@color/orange_strong</color>
+    <color name="nav_item_selected_bg">#1AFF7A00</color>
+    <color name="transparent">#00000000</color>
+    <color name="card_background_dark">@color/card_background</color>
+    <color name="text_secondary_dark">@color/text_secondary</color>
+    <color name="error_red">@color/error</color>
+    <color name="text_secondary_light">@color/text_tertiary</color>
+    <color name="card_dark_bg">@color/card_background</color>
+    <color name="input_dark_bg">@color/input_background</color>
+    <color name="input_stroke_dark">@color/border</color>
+    <color name="separator_dark">@color/divider</color>
+    <color name="text_hint">@color/text_tertiary</color>
+    <color name="error_container">#3E1B1B</color>
+    <color name="success_container">#1B3E1B</color>
+    <color name="icon_disabled">@color/text_disabled</color>
+    <color name="pressed_state">#1FFFFFFF</color>
+    <color name="hover_state">#0FFFFFFF</color>
+    <color name="focus_state">#1FFFFFFF</color>
+    <color name="ripple_color">@color/ripple</color>
+
+</resources>

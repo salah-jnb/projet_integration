@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
+
+    <!-- Header avec effet de surface -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Disponibilités"
+            style="@style/TextAppearance.App.H2"
+            android:textSize="20sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@color/white"
+            app:backgroundTint="@color/orange_strong"
+            android:contentDescription="Créer une disponibilité"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/surface_variant"/>
+
+    <!-- Container principal avec padding -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="20dp">
+
+        <!-- ProgressBar moderne -->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:indicatorColor="@color/orange_strong"
+            app:trackColor="@color/surface_variant"/>
+
+        <!-- État vide enrichi -->
+        <LinearLayout
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="40dp">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_calendar_empty"
+                android:alpha="0.6"
+                android:contentDescription="Aucune disponibilité"
+                android:layout_marginBottom="24dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aucune disponibilité"
+                style="@style/TextAppearance.App.H3"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Planifiez vos créneaux disponibles pour recevoir des réservations"
+                style="@style/TextAppearance.App.Body"
+                android:gravity="center"
+                android:layout_marginBottom="24dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_empty"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:icon="@drawable/ic_add"
+                app:iconTint="@color/white"
+                app:backgroundTint="@color/orange_strong"
+                android:contentDescription="Planifier une disponibilité"/>
+
+        </LinearLayout>
+
+        <!-- Groupes par jour -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/groups_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingBottom="16dp"/>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="20dp"
+    android:fitsSystemWindows="true">
+
+    <!-- Header avec titre et bouton -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mes Produits"
+            style="@style/TextAppearance.App.H2"
+            android:textSize="20sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Créer"
+            style="@style/Widget.App.Button.Primary"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        style="@style/Widget.App.TextInputLayout"
+        app:startIconDrawable="@android:drawable/ic_menu_search"
+        app:startIconTint="@color/text_secondary">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Rechercher un produit…"
+            style="@style/Widget.App.TextInputEditText"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Indicateur de progression -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:indicatorColor="@color/orange_strong"
+        app:trackColor="@color/surface_variant"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- État vide avec illustration -->
+    <LinearLayout
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="40dp">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_shopping_bag"
+            android:alpha="0.7"
+            android:contentDescription="Aucun produit"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aucun produit trouvé"
+            style="@style/TextAppearance.App.H3"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Créez votre premier produit pour commencer à vendre"
+            style="@style/TextAppearance.App.Body"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Créer mon premier produit"
+            style="@style/Widget.App.Button.Primary"/>
+
+    </LinearLayout>
+
+    <!-- Liste des produits -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:scrollbars="vertical"/>
+
+</LinearLayout>

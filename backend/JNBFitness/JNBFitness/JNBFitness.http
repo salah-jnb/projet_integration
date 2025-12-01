@@ -1,0 +1,6 @@
+@JNBFitness_HostAddress = http://localhost:5079
+
+GET {{JNBFitness_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

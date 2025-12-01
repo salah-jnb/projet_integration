@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Noter le coach"
+        style="@style/TextAppearance.App.H3"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Note"
+        style="@style/TextAppearance.App.Body"
+        android:layout_marginTop="16dp"/>
+
+    <RatingBar
+        android:id="@+id/rb_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1"
+        android:rating="5"
+        android:layout_marginTop="8dp"
+        android:progressTint="@color/orange_strong"
+        android:secondaryProgressTint="@color/orange_strong"
+        android:indeterminateTint="@color/orange_strong"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Commentaire (optionnel)"
+        style="@style/TextAppearance.App.Caption"
+        android:layout_marginTop="16dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.App.TextInputLayout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Partagez votre expérience"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            style="@style/Widget.App.TextInputEditText"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- En-tête -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mes_cours"
+            style="@style/TextAppearance.App.H2"
+            android:paddingBottom="16dp" />
+
+        <!-- État de chargement -->
+        <LinearLayout
+            android:id="@+id/loading_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:indeterminate="true"
+                app:indicatorColor="@color/orange_strong"
+                app:trackColor="@color/surface_variant" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/chargement_cours"
+                style="@style/TextAppearance.App.Body" />
+
+        </LinearLayout>
+
+        <!-- État vide -->
+        <LinearLayout
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_empty_courses"
+                android:contentDescription="@string/aucun_cours"
+                app:tint="@color/text_tertiary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aucun_cours"
+                style="@style/TextAppearance.App.H3"
+                android:textAlignment="center"
+                android:paddingHorizontal="32dp"
+                android:paddingTop="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ajouter_premier_cours"
+                style="@style/TextAppearance.App.Body"
+                android:textAlignment="center"
+                android:paddingHorizontal="32dp"
+                android:paddingTop="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ajouter_cours"
+                android:layout_marginTop="24dp"
+                style="@style/Widget.App.Button.Outline" />
+
+        </LinearLayout>
+
+        <!-- Liste des cours -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingVertical="8dp"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+
+    <!-- Bouton d'action flottant -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        android:contentDescription="@string/ajouter_cours"
+        app:tint="@color/white"
+        app:backgroundTint="@color/orange_strong" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

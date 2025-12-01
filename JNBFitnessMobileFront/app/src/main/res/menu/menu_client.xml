@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_dashboard" android:title="Tableau de Bord" android:icon="@android:drawable/ic_menu_sort_by_size"/>
+    <item android:id="@+id/nav_profil" android:title="Mon Profil" android:icon="@android:drawable/ic_menu_info_details"/>
+    <item android:id="@+id/nav_abonnements" android:title="Mes Abonnements" android:icon="@android:drawable/ic_menu_agenda"/>
+    <item android:id="@+id/nav_carte" android:title="Ma Carte" android:icon="@android:drawable/ic_menu_compass"/>
+    <item android:id="@+id/nav_coaching" android:title="Coaching" android:icon="@android:drawable/ic_menu_manage"/>
+    <item android:id="@+id/nav_cours" android:title="Cours Collectifs" android:icon="@android:drawable/ic_menu_week"/>
+    <item android:id="@+id/nav_articles" android:title="Articles" android:icon="@android:drawable/ic_menu_edit"/>
+    <item android:id="@+id/nav_produits" android:title="Produits" android:icon="@android:drawable/ic_menu_crop"/>
+    <item android:id="@+id/nav_parrainage" android:title="Parrainage" android:icon="@android:drawable/ic_menu_share"/>
+    <item android:id="@+id/nav_notifications" android:title="Notifications" android:icon="@android:drawable/ic_menu_view"/>
+    <item android:id="@+id/nav_logout" android:title="Déconnexion" android:icon="@android:drawable/ic_lock_power_off"/>
+</menu>

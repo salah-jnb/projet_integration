@@ -1,0 +1,62 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.JNBFitnessMobileFront" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="29">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="21">@color/background</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/background</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <style name="Theme.JNBFitnessMobileFront" parent="Base.Theme.JNBFitnessMobileFront" />
+
+    <!-- Thème spécifique pour l'activité de lancement -->
+    <style name="Theme.JNBFitnessMobileFront.Launcher" parent="Theme.App.Modern.NoActionBar">
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor" tools:targetApi="21">@color/background</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/background</item>
+        <item name="windowSplashScreenBackground">@color/background</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/orange_strong</item>
+        <item name="postSplashScreenTheme">@style/Theme.App.Modern.NoActionBar</item>
+    </style>
+
+    <!-- Modern Themes -->
+    <style name="Theme.App.Modern" parent="Theme.Material3.Dark">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/text_on_primary</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimaryContainer">@color/text_primary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/text_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondaryContainer">@color/text_primary</item>
+        <item name="colorTertiary">@color/orange_soft</item>
+        <item name="colorOnTertiary">@color/text_on_primary</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorOutline">@color/border</item>
+    </style>
+
+    <style name="Theme.App.Modern.NoActionBar" parent="Theme.App.Modern">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.App.Modern.Dark" parent="Theme.App.Modern" />
+    
+    <style name="Theme.App.Modern.Light" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Not implemented as per dark theme requirement, but defined for completeness -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+    </style>
+</resources>

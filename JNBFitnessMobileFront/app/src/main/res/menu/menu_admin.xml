@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_dashboard" android:title="Tableau de Bord" android:icon="@android:drawable/ic_menu_sort_by_size"/>
+    <item android:id="@+id/nav_users" android:title="Utilisateurs" android:icon="@android:drawable/ic_menu_myplaces"/>
+    <item android:id="@+id/nav_abonnements" android:title="Abonnements" android:icon="@android:drawable/ic_menu_agenda"/>
+    <item android:id="@+id/nav_cours" android:title="Cours Collectifs" android:icon="@android:drawable/ic_menu_week"/>
+    <item android:id="@+id/nav_articles" android:title="Articles" android:icon="@android:drawable/ic_menu_edit"/>
+    <item android:id="@+id/nav_produits" android:title="Produits" android:icon="@android:drawable/ic_menu_crop"/>
+    <item android:id="@+id/nav_paiements" android:title="Paiements" android:icon="@android:drawable/ic_menu_send"/>
+    <item android:id="@+id/nav_cartes" android:title="Cartes" android:icon="@android:drawable/ic_menu_compass"/>
+    <item android:id="@+id/nav_settings" android:title="Paramètres" android:icon="@android:drawable/ic_menu_preferences"/>
+    <item android:id="@+id/nav_logout" android:title="Déconnexion" android:icon="@android:drawable/ic_lock_power_off"/>
+</menu>

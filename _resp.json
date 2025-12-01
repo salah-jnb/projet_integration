@@ -1,0 +1,1 @@
+{"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"Prix":["The value '5.500' is not valid for Prix."],"ImageUrl":["The ImageUrl field is required."]},"traceId":"00-d032a2ba9c702fa11ceaf4c8e55b3d59-a56b8ec1e683d9b8-00"}

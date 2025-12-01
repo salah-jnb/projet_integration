@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="content_container"/>
+    <item type="id" name="drawer"/>
+    <item type="id" name="toolbar"/>
+    <item type="id" name="nav"/>
+    <item type="id" name="empty_state"/>
+    <item type="id" name="btn_empty_create"/>
+</resources>
